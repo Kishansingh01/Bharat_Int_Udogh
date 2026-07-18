@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProductCard from '@/components/ProductCard';
+import RecommendationWidget from '@/components/RecommendationWidget';
 import { Product } from '@/types';
 
 export default function Shop() {
@@ -117,6 +118,9 @@ export default function Shop() {
                     <p className="text-dark-charcoal/70">
                       {filteredProducts.length} उत्पाद दिखा रहे हैं
                     </p>
+                  </div>
+                  <div className="mb-8">
+                    <RecommendationWidget />
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredProducts.map(product => (
